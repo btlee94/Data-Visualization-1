@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<style>
+    body {
+        background-color: #292929;
+    }
+    h1 {
+        color: #c9d0d4;
+        font-family: 'Helvetica Neue', sans-serif;
+        font-size: 46px;
+        font-weight: 100;
+        text-align: center;
+        line-height: 50px;
+        letter-spacing: 1px;
+        padding: 0 0 40px;
+        border-bottom: double #555;
+    }
+
+    rect {
+        stroke-width: 2;
+        stroke: #808080;
+    }
+
+    circle {
+        stroke-width: 2;
+        stroke: #808080;
+    } 
+    circle.enabled { fill: #fe921f; }
+    circle.disabled { fill: transparent !important}
+
+    .tip {
+        background: #fafafa;
+        box-shadow: 0 0 2px #808080;
+        font-size: 15px;
+        font-family: 'Verdana', sans-serif;
+        padding: 10px;
+        position: absolute;
+        text-align: center;
+        width: 50px;
+        display: none;
+    }
+
+    .svg-container {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        padding-bottom: 100%; /* aspect ratio */
+        vertical-align: middle;
+        overflow: hidden;
+    }
+
+    .svg-content-responsive {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+</style>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+<body>
+    <h1>Appropriateness of Behaviours in Different Situations</h1>
+    <div id="pieChart" align="center"></div>
+    <script src="d3.v4.js"></script>
+    <script src="data.js" type="text/javascript"></script>
+    <script src="chart.js" type='text/javascript'></script>
+</body>
+
+   

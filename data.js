@@ -1,0 +1,281 @@
+var situations = ["Class", "Date", "Bus", "Family Dinner", "Park",
+                    "Church", "Job Interview", "Sidewalk", "Movies",
+                    "Bar", "Elevator", "Restroom", "Own Room", "Dorm Lounge", "Football Game"
+];
+var blank = [
+        	{ action: "Run", value: 5 },
+        	{ action: "Talk", value: 5 },
+      		{ action: "Kiss", value: 5 },
+        	{ action: "Write", value: 5 },
+        	{ action: "Eat", value: 5 },
+        	{ action: "Sleep", value: 5 },
+            { action: "Mumble", value: 5 },
+        	{ action: "Read", value: 5 },
+      		{ action: "Fight", value: 5 },
+        	{ action: "Belch", value: 5 },
+        	{ action: "Argue", value: 5 },
+        	{ action: "Jump", value: 5 },
+            { action: "Cry", value: 5 },
+        	{ action: "Laugh", value: 5 },
+      		{ action: "Shout", value: 5 }
+];
+var school = [
+        	{ action: "Run", value: 2.52 },
+        	{ action: "Talk", value: 6.21 },
+      		{ action: "Kiss", value: 2.10 },
+        	{ action: "Write", value: 8.17 },
+        	{ action: "Eat", value: 4.23 },
+        	{ action: "Sleep", value: 3.60 },
+            { action: "Mumble", value: 3.62 },
+        	{ action: "Read", value: 7.27 },
+      		{ action: "Fight", value: 1.21 },
+        	{ action: "Belch", value: 1.77 },
+        	{ action: "Argue", value: 5.33 },
+        	{ action: "Jump", value: 1.79 },
+            { action: "Cry", value: 2.21 },
+        	{ action: "Laugh", value: 6.23 },
+      		{ action: "Shout", value: 1.94 }
+];
+var date = [
+        	{ action: "Run", value: 5.00 },
+        	{ action: "Talk", value: 8.56 },
+      		{ action: "Kiss", value: 8.73 },
+        	{ action: "Write", value: 3.62 },
+        	{ action: "Eat", value: 7.79 },
+        	{ action: "Sleep", value: 3.77 },
+            { action: "Mumble", value: 3.12 },
+        	{ action: "Read", value: 2.88 },
+      		{ action: "Fight", value: 3.58 },
+        	{ action: "Belch", value: 2.23 },
+        	{ action: "Argue", value: 4.50 },
+        	{ action: "Jump", value: 4.42 },
+            { action: "Cry", value: 3.04 },
+        	{ action: "Laugh", value: 8.00 },
+      		{ action: "Shout", value: 3.79 }
+];
+var bus = [
+        	{ action: "Run", value: 1.44 },
+        	{ action: "Talk", value: 8.08 },
+      		{ action: "Kiss", value: 4.27 },
+        	{ action: "Write", value: 4.87 },
+        	{ action: "Eat", value: 5.48 },
+        	{ action: "Sleep", value: 7.04 },
+            { action: "Mumble", value: 5.17 },
+        	{ action: "Read", value: 7.17 },
+      		{ action: "Fight", value: 1.52 },
+        	{ action: "Belch", value: 2.15 },
+        	{ action: "Argue", value: 4.17 },
+        	{ action: "Jump", value: 3.12 },
+            { action: "Cry", value: 3.08 },
+        	{ action: "Laugh", value: 7.10 },
+      		{ action: "Shout", value: 3.00 }
+];
+var familyDinner = [
+        	{ action: "Run", value: 2.56 },
+        	{ action: "Talk", value: 8.52 },
+      		{ action: "Kiss", value: 4.92 },
+        	{ action: "Write", value: 2.58 },
+        	{ action: "Eat", value: 8.44 },
+        	{ action: "Sleep", value: 2.29 },
+            { action: "Mumble", value: 2.54 },
+        	{ action: "Read", value: 3.96 },
+      		{ action: "Fight", value: 1.67 },
+        	{ action: "Belch", value: 2.50 },
+        	{ action: "Argue", value: 3.25 },
+        	{ action: "Jump", value: 2.29 },
+            { action: "Cry", value: 3.21 },
+        	{ action: "Laugh", value: 7.13 },
+      		{ action: "Shout", value: 1.96 }
+];
+var park = [
+        	{ action: "Run", value: 7.94 },
+        	{ action: "Talk", value: 8.42 },
+      		{ action: "Kiss", value: 7.71 },
+        	{ action: "Write", value: 7.00 },
+        	{ action: "Eat", value: 8.13 },
+        	{ action: "Sleep", value: 5.63 },
+            { action: "Mumble", value: 5.40 },
+        	{ action: "Read", value: 7.77 },
+      		{ action: "Fight", value: 3.06 },
+        	{ action: "Belch", value: 5.00 },
+        	{ action: "Argue", value: 5.06 },
+        	{ action: "Jump", value: 7.42 },
+            { action: "Cry", value: 5.21 },
+        	{ action: "Laugh", value: 8.10 },
+      		{ action: "Shout", value: 6.92 }
+];
+var church = [
+        	{ action: "Run", value: 1.38 },
+        	{ action: "Talk", value: 3.29 },
+      		{ action: "Kiss", value: 2.38 },
+        	{ action: "Write", value: 2.85 },
+        	{ action: "Eat", value: 1.38 },
+        	{ action: "Sleep", value: 1.77 },
+            { action: "Mumble", value: 3.52 },
+        	{ action: "Read", value: 3.58 },
+      		{ action: "Fight", value: 0.62 },
+        	{ action: "Belch", value: 1.42 },
+        	{ action: "Argue", value: 1.92 },
+        	{ action: "Jump", value: 1.71 },
+            { action: "Cry", value: 3.13 },
+        	{ action: "Laugh", value: 2.60 },
+      		{ action: "Shout", value: 1.33 }
+];
+var jobInterview = [
+        	{ action: "Run", value: 1.94 },
+        	{ action: "Talk", value: 8.46 },
+      		{ action: "Kiss", value: 1.08 },
+        	{ action: "Write", value: 4.85 },
+        	{ action: "Eat", value: 1.73 },
+        	{ action: "Sleep", value: 0.75 },
+            { action: "Mumble", value: 1.31 },
+        	{ action: "Read", value: 2.48 },
+      		{ action: "Fight", value: 1.04 },
+        	{ action: "Belch", value: 1.21 },
+        	{ action: "Argue", value: 1.83 },
+        	{ action: "Jump", value: 1.48 },
+            { action: "Cry", value: 1.37 },
+        	{ action: "Laugh", value: 5.88 },
+      		{ action: "Shout", value: 1.65 }
+];
+var sidewalk = [
+        	{ action: "Run", value: 5.58 },
+        	{ action: "Talk", value: 8.19 },
+      		{ action: "Kiss", value: 4.75 },
+        	{ action: "Write", value: 3.38 },
+        	{ action: "Eat", value: 4.83 },
+        	{ action: "Sleep", value: 1.46 },
+            { action: "Mumble", value: 4.96 },
+        	{ action: "Read", value: 4.81 },
+      		{ action: "Fight", value: 1.46 },
+        	{ action: "Belch", value: 2.81 },
+        	{ action: "Argue", value: 4.08 },
+        	{ action: "Jump", value: 3.54 },
+            { action: "Cry", value: 3.71 },
+        	{ action: "Laugh", value: 7.40 },
+      		{ action: "Shout", value: 4.88 }
+];
+var movies = [
+        	{ action: "Run", value: 2.46 },
+        	{ action: "Talk", value: 4.98 },
+      		{ action: "Kiss", value: 6.21 },
+        	{ action: "Write", value: 2.73 },
+        	{ action: "Eat", value: 7.48 },
+        	{ action: "Sleep", value: 4.08 },
+            { action: "Mumble", value: 4.13 },
+        	{ action: "Read", value: 1.73 },
+      		{ action: "Fight", value: 1.37 },
+        	{ action: "Belch", value: 2.58 },
+        	{ action: "Argue", value: 1.71 },
+        	{ action: "Jump", value: 2.31 },
+            { action: "Cry", value: 7.15 },
+        	{ action: "Laugh", value: 7.94 },
+      		{ action: "Shout", value: 2.42 }
+];
+var bar = [
+        	{ action: "Run", value: 1.96 },
+        	{ action: "Talk", value: 8.25 },
+      		{ action: "Kiss", value: 5.17 },
+        	{ action: "Write", value: 5.38 },
+        	{ action: "Eat", value: 7.67 },
+        	{ action: "Sleep", value: 2.90 },
+            { action: "Mumble", value: 6.21 },
+        	{ action: "Read", value: 4.71 },
+      		{ action: "Fight", value: 1.90 },
+        	{ action: "Belch", value: 5.04 },
+        	{ action: "Argue", value: 4.31 },
+        	{ action: "Jump", value: 3.75 },
+            { action: "Cry", value: 3.44 },
+        	{ action: "Laugh", value: 8.23 },
+      		{ action: "Shout", value: 4.13 }
+];
+var elevator = [
+        	{ action: "Run", value: 1.63 },
+        	{ action: "Talk", value: 7.40 },
+      		{ action: "Kiss", value: 4.79 },
+        	{ action: "Write", value: 3.04 },
+        	{ action: "Eat", value: 5.10 },
+        	{ action: "Sleep", value: 1.31 },
+            { action: "Mumble", value: 5.12 },
+        	{ action: "Read", value: 4.48 },
+      		{ action: "Fight", value: 1.58 },
+        	{ action: "Belch", value: 2.54 },
+        	{ action: "Argue", value: 2.58 },
+        	{ action: "Jump", value: 2.12 },
+            { action: "Cry", value: 3.48 },
+        	{ action: "Laugh", value: 6.77 },
+      		{ action: "Shout", value: 1.73 }
+];
+var restroom = [
+        	{ action: "Run", value: 2.83 },
+        	{ action: "Talk", value: 7.25 },
+      		{ action: "Kiss", value: 2.81 },
+        	{ action: "Write", value: 3.46 },
+        	{ action: "Eat", value: 2.35 },
+        	{ action: "Sleep", value: 2.83 },
+            { action: "Mumble", value: 5.04 },
+        	{ action: "Read", value: 4.75 },
+      		{ action: "Fight", value: 1.77 },
+        	{ action: "Belch", value: 5.12 },
+        	{ action: "Argue", value: 3.48 },
+        	{ action: "Jump", value: 3.65 },
+            { action: "Cry", value: 4.79 },
+        	{ action: "Laugh", value: 5.90 },
+      		{ action: "Shout", value: 3.52 }
+];
+var ownRoom = [
+        	{ action: "Run", value: 6.15 },
+        	{ action: "Talk", value: 8.58 },
+      		{ action: "Kiss", value: 8.52 },
+        	{ action: "Write", value: 8.29 },
+        	{ action: "Eat", value: 7.94 },
+        	{ action: "Sleep", value: 8.85 },
+            { action: "Mumble", value: 7.67 },
+        	{ action: "Read", value: 8.58 },
+      		{ action: "Fight", value: 4.25 },
+        	{ action: "Belch", value: 6.81 },
+        	{ action: "Argue", value: 7.52 },
+        	{ action: "Jump", value: 6.73 },
+            { action: "Cry", value: 8.00 },
+        	{ action: "Laugh", value: 8.17 },
+      		{ action: "Shout", value: 6.44 }
+];
+var dorm = [
+        	{ action: "Run", value: 4.40 },
+        	{ action: "Talk", value: 7.88 },
+      		{ action: "Kiss", value: 6.54 },
+        	{ action: "Write", value: 7.73 },
+        	{ action: "Eat", value: 7.19 },
+        	{ action: "Sleep", value: 6.08 },
+            { action: "Mumble", value: 5.50 },
+        	{ action: "Read", value: 8.56 },
+      		{ action: "Fight", value: 2.40 },
+        	{ action: "Belch", value: 4.00 },
+        	{ action: "Argue", value: 4.88 },
+        	{ action: "Jump", value: 4.58 },
+            { action: "Cry", value: 3.88 },
+        	{ action: "Laugh", value: 7.75 },
+      		{ action: "Shout", value: 3.60 }
+];
+var footballGame = [
+        	{ action: "Run", value: 4.12 },
+        	{ action: "Talk", value: 8.08 },
+      		{ action: "Kiss", value: 5.08 },
+        	{ action: "Write", value: 4.56 },
+        	{ action: "Eat", value: 8.04 },
+        	{ action: "Sleep", value: 2.98 },
+            { action: "Mumble", value: 5.23 },
+        	{ action: "Read", value: 3.69 },
+      		{ action: "Fight", value: 2.04 },
+        	{ action: "Belch", value: 3.85 },
+        	{ action: "Argue", value: 4.98 },
+        	{ action: "Jump", value: 7.12 },
+            { action: "Cry", value: 4.31 },
+        	{ action: "Laugh", value: 7.90 },
+      		{ action: "Shout", value: 7.94 }
+];
+
+
+
+
+
